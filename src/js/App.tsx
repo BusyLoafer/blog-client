@@ -6,8 +6,10 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import MainPage from './pages/MainPage';
+import Home from './pages/Home';
 import { API_URL } from './libs/config';
+import Menu from './components/Menu';
+import Footer from './components/Footer';
 
 const App = () => {
 
@@ -18,10 +20,16 @@ const App = () => {
 
 
   return (
-    <Routes>
-      <Route path="/" element={<MainPage />} />
-      {/* <Route path="/about" element={<About />} /> */}
-    </Routes>
+    <>
+      <Menu/>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/about" element={<About />} /> */}
+        </Routes>
+      </main>
+      <Footer/>
+    </>
   );
 }
 

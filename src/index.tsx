@@ -7,6 +7,8 @@ import store from './js/store'
 import App from './js/App'
 import { BrowserRouter } from 'react-router-dom'
 
+import "./index.scss"
+
 // As of React 18
 const root = ReactDOM.createRoot(document.getElementById('root') as Element)
 
