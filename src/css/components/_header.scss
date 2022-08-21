@@ -1,0 +1,37 @@
+@import '../config/vars';
+
+header {
+  grid-area: header;
+  // background-color: #8cffa0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 12px 10px 24px;
+  padding: 10px 20px;
+  background-color: $grey-2;
+  border-radius: $radMid;
+  color: $grey-4;
+
+  input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: $grey-4;
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  .header {
+    &-search {
+      font-size: 18px;
+      margin: 8px;
+    }
+    &-notification {
+      font-size: 24px;
+      margin: 8px;
+    }
+  }
+}

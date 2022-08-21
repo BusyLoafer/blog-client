@@ -1,0 +1,55 @@
+@import '../config/vars';
+
+nav {
+  grid-area: nav;
+  // background-color: #ffa08c;
+
+  margin: 16px 12px;
+  padding: 20px 0;
+  border-radius: $radBig;
+  background-color: $grey-2;
+  color: white;
+
+  .menu {
+
+    &-up {}
+
+    &-logo {}
+
+    ul {
+      padding: 0;
+
+      li {
+        list-style: none;
+        display: flex;
+
+        .menu-link {
+          text-decoration: none;
+          color: $linkBase;
+          width: 100%;
+          padding: 20px 12px;
+          flex-grow: 1;
+          display: flex;
+          align-items: center;
+
+          i {
+            margin-right: 12px;
+            font-size: 24px;
+          }
+
+          &:hover {
+            i {
+              color: $linkActive;
+            }
+          }
+
+          &-active {
+            color: $linkActive;
+            border-right: 4px solid $linkActive;
+            background: linear-gradient(to right, $grey-2, $linkGradient);
+          }
+        }
+      }
+    }
+  }
+}

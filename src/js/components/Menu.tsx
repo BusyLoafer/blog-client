@@ -1,5 +1,15 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+
+type LinkType = { link: string, title: string, icon: string }
+
+const links: LinkType[] = [
+  { link: "/", title: "HOME", icon: "home" },
+  { link: "food", title: "FOOD", icon: "spoon-knife" },
+  { link: "contacts", title: "CONTACTS", icon: "address-book" },
+  { link: "projects", title: "PROJECTS", icon: "display" },
+  { link: "journal", title: "JOURNAL", icon: "book" },
+]
 
 const Menu = () => {
 
@@ -8,26 +18,25 @@ const Menu = () => {
       <div className="menu">
         <div className="menu-up">
           <div className="menu-logo">
-            Hi
+            Watch yourself
           </div>
-          <ul className="menu-links">
-            <li>
-              <NavLink
-                to="/"
-                className={({ isActive }) => isActive ? "menu-link menu-link-active" : "menu-link"}
-                // style={({ isActive }) =>
-                //   isActive ? activeStyle : undefined
-                // }
-              >
-                A
-              </NavLink>
-              <NavLink
-                to="articles"
-                className={({ isActive }) => isActive ? "menu-link menu-link-active" : "menu-link"}
-              >
-                B
-              </NavLink>
-            </li>
+          <ul>
+            {
+              links.map((l: LinkType) => (
+                <li key={l.title}>
+                  <NavLink
+                    to={l.link}
+                    className={({ isActive }) => isActive ?
+                      "menu-link menu-link-active" :
+                      "menu-link"
+                    }
+                  >
+                    <i className={`icon-${l.icon}`} />
+                    {l.title}
+                  </NavLink>
+                </li>
+              ))
+            }
           </ul>
         </div>
       </div>
