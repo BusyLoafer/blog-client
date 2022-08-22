@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
 
 const Home = () => {
 
@@ -8,11 +6,7 @@ const Home = () => {
 
   return (
     <div>
-      <Calendar
-        onChange={setDate}
-        value={date}
-        locale="ru"
-      />
+      HOME
     </div>
   );
 }

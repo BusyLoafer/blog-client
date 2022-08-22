@@ -1,7 +1,11 @@
 import React, { FC, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
+import Tabs from '../../components/tabs/Tabs';
 import { checkContacts } from '../../services/StoreServices/ContactStoreService'
 import { IRootState } from '../../store/reducers';
+import Groups from './Groups';
+import Meets from './Meets';
+import Persons from './Persons';
 
 const Contacts: FC = () => {
 
@@ -21,9 +25,14 @@ const Contacts: FC = () => {
   
 
   return (
-    <div>Contacts
-      {/* Встречи */}
-      {/* люди */}
+    <div id="contacts" className='main-block'>
+      <Tabs
+        titles={['Встречи', 'Контакты', 'Группы']}
+      >
+        <Meets/>
+        <Persons/>
+        <Groups/>
+      </Tabs>
     </div>
   )
 }

@@ -5,7 +5,7 @@ import { getContacts, getGroups, getPersons } from '../ApiServices/ContactsApiSe
 
 const { dispatch } = store;
 
-export const checkContacts = () => {
+const checkContacts = () => {
   if (!store.getState().groups.length) {
     getContactsData();
     getGroupsData();
@@ -24,3 +24,7 @@ const getGroupsData = async () => {
 const getPersonsData = async () => {
   getPersons.then((reponse: AxiosResponse) => dispatch(setPersons(reponse.data)))
 }
+
+
+
+export {checkContacts}

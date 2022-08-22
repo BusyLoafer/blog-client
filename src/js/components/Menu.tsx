@@ -31,7 +31,7 @@ const Menu = () => {
                       "menu-link"
                     }
                   >
-                    <i className={`icon-${l.icon}`} />
+                    <i className={`icon-${l.icon} fz-24`} />
                     {l.title}
                   </NavLink>
                 </li>

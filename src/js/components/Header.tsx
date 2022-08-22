@@ -5,20 +5,17 @@ import CustomDatePicker from './CustomDatePicker';
 const Header = () => {
   return (
     <header>
-      <div className="header-search">
-        <i className="icon-search" />
-      </div>
+      <i className="icon-search fz-18 m-8" />
 
       <input
+        className='fz-18'
         type="text"
         placeholder='Search...'
       />
 
-      <CustomDatePicker/>
+      <CustomDatePicker />
 
-      <div className="header-notification">
-        <i className="icon-envelop" />
-      </div>
+      <i className="icon-envelop fz-24 m-8" />
 
       <Avatar big={true} />
     </header>

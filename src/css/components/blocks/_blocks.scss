@@ -1,0 +1,10 @@
+@use './contacts';
+@use './food';
+@use './home';
+@use './journal';
+@use './projects';
+
+.main-block {
+  margin: 20px 24px 10px 12px;
+  padding: 10px 20px;
+}

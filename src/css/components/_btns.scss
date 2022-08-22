@@ -1,0 +1,16 @@
+@import '../config/vars';
+.btn {
+  &-add {
+    border-radius: $radMin;
+    border: 1px dashed $grey-4;
+    color: $grey-4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      border: 1px dashed $orange;
+      color: $orange;
+      cursor: pointer;
+    }
+  }
+}
