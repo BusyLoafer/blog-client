@@ -18,12 +18,12 @@ const Groups: FC<{}> = (): ReactElement => {
   
 
   return (
-    <div className='groups'>
+    <div className='groups p-16'>
       {
         groups.map((gr: Group )=> (
-          <div className="group p-8">
-            <div className='fz-24'>{gr.title}</div>
-            <div className='fz-18'>{gr.description}</div>
+          <div className="group p-12" key={gr.id}>
+            <div className='group-title fz-24'>{gr.title}</div>
+            <div className='fz-14'>{gr.description}</div>
           </div>
         ))
       }

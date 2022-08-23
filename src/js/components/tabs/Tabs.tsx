@@ -14,20 +14,12 @@ const Tabs = (props: TabsProps) => {
   // ? state
   const [activeIndex, setActiveIndex] = useState(0);
 
-
-  // const TabsRender: FC<{}>[] = ():ReactElement[] => {
-  //   return titles.map((title: string, index: number) => {
-  //     const props: TabProps = {title, active: activeIndex === index}
-  //     return <Tab {...props} />
-  //   })
-  // }
-
   const changeTab = (val: number) => setActiveIndex(val)
 
 
   return (
     <div>
-      <div className="tabs">
+      <div className="tabs p-16">
         {
           titles.map((title: string, index: number) => {
             const props = { title, active: activeIndex === index, onClick: () => changeTab(index) }
