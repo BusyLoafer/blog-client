@@ -1,7 +1,8 @@
 import { AxiosResponse } from 'axios';
+import { Group } from '../../libs/types';
 import store from '../../store'
 import { setContacts, setGroups, setPersons } from '../../store/actions/contacts';
-import { getContacts, getGroups, getPersons } from '../ApiServices/ContactsApiService';
+import { axiosCreateGroup, getContacts, getGroups, getPersons } from '../ApiServices/ContactsApiService';
 
 const { dispatch } = store;
 
@@ -14,17 +15,21 @@ const checkContacts = () => {
 }
 
 const getContactsData = async () => {
-  getContacts.then((reponse: AxiosResponse) => dispatch(setContacts(reponse.data)))
+  getContacts.then((response: AxiosResponse) => dispatch(setContacts(response.data)))
 }
 
 const getGroupsData = async () => {
-  getGroups.then((reponse: AxiosResponse) => dispatch(setGroups(reponse.data)))
+  getGroups.then((response: AxiosResponse) => dispatch(setGroups(response.data)))
 }
 
 const getPersonsData = async () => {
-  getPersons.then((reponse: AxiosResponse) => dispatch(setPersons(reponse.data)))
+  getPersons.then((response: AxiosResponse) => dispatch(setPersons(response.data)))
+}
+
+const createGroup = async (params:Group) => {
+  axiosCreateGroup(params).then((response: AxiosResponse) => console.log(response))
 }
 
 
 
-export {checkContacts}
+export {checkContacts, createGroup}

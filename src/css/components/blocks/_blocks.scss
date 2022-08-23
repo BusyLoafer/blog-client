@@ -3,8 +3,16 @@
 @use './home';
 @use './journal';
 @use './projects';
+@import '../../config/vars';
 
 .main-block {
   margin: 20px 24px 10px 12px;
   padding: 10px 20px;
+}
+
+.base-grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  padding: 16px;
 }

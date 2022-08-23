@@ -3,9 +3,9 @@ import { useSelector } from 'react-redux';
 import Tabs from '../../components/tabs/Tabs';
 import { checkContacts } from '../../services/StoreServices/ContactStoreService'
 import { IRootState } from '../../store/reducers';
-import Groups from './Groups';
-import Meets from './Meets';
-import Persons from './Persons';
+import Groups from './Groups/Groups';
+import Meets from './Meets/Meets';
+import Persons from './Persons/Persons';
 
 const Contacts: FC = () => {
 

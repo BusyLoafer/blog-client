@@ -1,29 +1,22 @@
 @import '../../config/vars';
-.groups {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
-  .group {
-    border-radius: $radMin;
-    background-color: $grey-2;
-    color: $grey-4;
-    &-title {
-      margin-bottom: 8px;
-    }
+
+.card {
+  border-radius: $radMin;
+  background-color: $grey-2;
+  color: $grey-4;
+  padding: 12px;
+
+  &-title {
+    font-size: 24px;
+    margin-bottom: 8px;
   }
 }
 
-.persons {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
-  min-height: 90px;
-  .person {
-    border-radius: $radMin;
-    background-color: $grey-2;
-    color: $grey-4;
-    &-title {
-      margin-bottom: 8px;
-    }
-  }
+.group-form {
+  width: 350px;
+  border-radius: $radMin;
+  background-color: $grey-1;
+  box-shadow: 0 0 10px $orange2;
+  color: $grey-4;
+  padding: 16px;
 }

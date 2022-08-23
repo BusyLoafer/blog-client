@@ -1,0 +1,16 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vW;
+  height: 100vH;
+  background-color: rgb(17 30 81 / 30%);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-body {
+    z-index: 10;
+  }
+}
