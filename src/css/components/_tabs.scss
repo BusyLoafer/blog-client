@@ -1,17 +1,18 @@
 @import '../config/vars';
 
 .tabs {
-  display: flex;
+  display: flex;    
+  width: max-content;
+  background-color: $tabBG;
+  border-radius: 12px;
 
   .tab {
     font-size: 18px;
     padding: 8px 16px;
-    background-color: $tabBG;
     color: $tabColor;
-    border-radius: 8px 8px 0 0;
+    border-radius: 10px;
     cursor: pointer;
     border: 1px solid $tabBG;
-    border-bottom: none;
     &:hover {
       color: $tabColorActive;
     }
@@ -20,7 +21,6 @@
       background-color: $tabBGActive;
       color: $tabColorActive;
       border: 1px solid $tabBorder;
-      border-bottom: none;
     }
   }
 

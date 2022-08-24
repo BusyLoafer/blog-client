@@ -1,30 +1,41 @@
-import React, { FC, ReactElement, useState } from 'react'
+import React, { FC, ReactElement, useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 import Button from '../../../components/buttons/Button'
 import Input from '../../../components/forms/Input'
 import Textarea from '../../../components/forms/Textarea'
 import Modal from '../../../components/Modal'
 import { Group } from '../../../libs/types'
-import { createGroup } from '../../../services/StoreServices/ContactStoreService'
+import { createOrEditGroup, toggleModalEditGroup } from '../../../services/StoreServices/ContactStoreService'
+import { IRootState } from '../../../store/reducers'
 
-interface IFormGroup {
-  show: boolean,
-  onExit: () => void
-}
-
-const FormGroup: FC<IFormGroup> = (props): ReactElement => {
-
-  const { show, onExit } = props
-
+const FormGroup: FC<{}> = (props): ReactElement => {
+  
+  const [id, setId] = useState(null)
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
 
+  const editGroup:Group | null = useSelector((state: IRootState) => state.editGroup);
+  const showEditGroup:boolean  = useSelector((state: IRootState) => state.showEditGroup);
+
+  useEffect(() => {
+    if (editGroup) {
+      setId(editGroup.id)
+      setTitle(editGroup.title)
+      setDescription(editGroup.description)
+    } else {
+      setId(null)
+      setTitle("")
+      setDescription("")
+    }
+  }, [editGroup])
+
   const click = () => {
-    const newGroup: Group = {title, description};
-    createGroup(newGroup, onExit)
+    const newGroup: Group = { id: id? id : undefined, title, description};
+    createOrEditGroup(newGroup)
   }
 
   return (
-    <Modal show={show} onExit={onExit}>
+    <Modal show={showEditGroup} onExit={toggleModalEditGroup}>
       <div className="group-form">
         <Input
           label="Название"
