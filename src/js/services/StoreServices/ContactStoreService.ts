@@ -26,8 +26,16 @@ const getPersonsData = async () => {
   getPersons.then((response: AxiosResponse) => dispatch(setPersons(response.data)))
 }
 
-const createGroup = async (params:Group) => {
-  axiosCreateGroup(params).then((response: AxiosResponse) => console.log(response))
+const createGroup = async (params:Group, func: () => void) => {
+  axiosCreateGroup(params).then((response: AxiosResponse) => {
+    addNewGroup(response.data)
+    func();
+  })
+}
+
+const addNewGroup = (group: Group) => {
+  const {groups} = store.getState();
+  dispatch(setGroups(groups.concat([group])))
 }
 
 

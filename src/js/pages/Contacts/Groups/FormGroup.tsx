@@ -20,7 +20,7 @@ const FormGroup: FC<IFormGroup> = (props): ReactElement => {
 
   const click = () => {
     const newGroup: Group = {title, description};
-    createGroup(newGroup)
+    createGroup(newGroup, onExit)
   }
 
   return (

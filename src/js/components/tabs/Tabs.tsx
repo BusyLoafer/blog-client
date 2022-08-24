@@ -18,7 +18,7 @@ const Tabs = (props: TabsProps) => {
 
 
   return (
-    <div>
+    <div className='tabs-wrapper'>
       <div className="tabs p-16">
         {
           titles.map((title: string, index: number) => {

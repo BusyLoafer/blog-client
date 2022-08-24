@@ -8,11 +8,14 @@
 .main-block {
   margin: 20px 24px 10px 12px;
   padding: 10px 20px;
+  flex-grow: 1;
 }
 
 .base-grid {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(100px, 150px));
   padding: 16px;
+  flex-grow: 1;
 }
