@@ -9,6 +9,10 @@ $grey-2: #2b2f33;
 $grey-3: #3f4246;
 $grey-4: #696b6e;
 
+$shadow-black: rgb(20 22 24 / 25%);
+$shadow-white: rgb(63 66 70 / 25%);
+$shadow-white-inset: rgb(6 6 7 / 25%);
+
 
 // ? BORDER RADUIS
 $radMin: 8px;
@@ -31,4 +35,4 @@ $tabColor: $grey-4;
 $tabColorActive: $orange;
 $tabBorder: $orange;
 $tabBG: $grey-1;
-$tabBGActive: $grey-2;
+$tabBGActive: $grey-1;

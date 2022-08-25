@@ -48,16 +48,21 @@
     right: 8px;
     font-size: 20px;
     display: flex;
+    border-radius: 16px;
+    padding: 4px;
     cursor: pointer;
     &:hover {
-      background-color: $grey-1;
+      // background-color: $grey-1;
       border-radius: 8px;
       .info-hidden {
         display: block;
       }
     }
-    i {
+    i {    
       padding: 8px;
+      border-radius: 8px;
+      margin: 4px;
+      box-shadow: inset -3px -3px 2px 3px $shadow-black, inset 3px 3px 3px 3px $shadow-white;
       &:hover {
         color: $orange;
       }

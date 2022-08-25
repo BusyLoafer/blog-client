@@ -12,7 +12,8 @@
     color: $tabColor;
     border-radius: 10px;
     cursor: pointer;
-    border: 1px solid $tabBG;
+    margin: 0 8px;
+    box-shadow: inset -3px -3px 2px 3px $shadow-black, inset 3px 3px 3px 3px $shadow-white;
     &:hover {
       color: $tabColorActive;
     }
@@ -20,7 +21,7 @@
     &-active {
       background-color: $tabBGActive;
       color: $tabColorActive;
-      border: 1px solid $tabBorder;
+      box-shadow: inset -3px -3px 11px 1px $shadow-white, inset 3px 3px 11px 1px $shadow-white-inset;
     }
   }
 

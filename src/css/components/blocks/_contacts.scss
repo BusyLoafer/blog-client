@@ -6,6 +6,7 @@
   color: $grey-4;
   padding: 12px;
   position: relative;
+  box-shadow: inset -3px -3px 2px 3px $shadow-black, inset 3px 3px 3px 3px $shadow-white;
 
   &-title {
     font-size: 24px;
