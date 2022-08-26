@@ -2,8 +2,10 @@ import React, { FC, ReactElement, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import AddButton from '../../../components/buttons/AddButton'
 import { Person } from '../../../libs/types'
+import { toggleModalEditPerson } from '../../../services/StoreServices/ContactStoreService'
 import { IRootState } from '../../../store/reducers'
 import PersonCard from './PersonCard'
+import PersonForm from './PersonForm'
 
 const Persons: FC<{}> = (): ReactElement => {
 
@@ -14,17 +16,13 @@ const Persons: FC<{}> = (): ReactElement => {
   }, [persons])
   
 
-  const addPerson = () => {
-
-  }
-  
-
   return (
     <div id='persons' className='base-grid'>
       {
         persons.map((prs: Person )=> <PersonCard {...prs} key={prs.id}/>)
       }
-      <AddButton onClick={addPerson}/>
+      <AddButton onClick={toggleModalEditPerson}/>
+      <PersonForm/>
     </div>
   )
 }

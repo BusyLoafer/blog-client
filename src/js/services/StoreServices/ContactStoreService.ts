@@ -1,7 +1,7 @@
 import { AxiosResponse } from 'axios';
 import { Group } from '../../libs/types';
 import store from '../../store'
-import { setContacts, setEditGroup, setGroups, setPersons, setShowEditGroup } from '../../store/actions/contacts';
+import { setContacts, setEditGroup, setGroups, setPersons, setShowEditGroup, setShowEditPerson } from '../../store/actions/contacts';
 import { axiosCreateOrEditGroup, getContacts, getGroups, getPersons } from '../ApiServices/ContactsApiService';
 
 const { dispatch } = store;
@@ -27,6 +27,12 @@ const getPersonsData = async () => {
 const toggleModalEditGroup = () => {
   const {showEditGroup} = store.getState();
   dispatch(setShowEditGroup(!showEditGroup))
+}
+
+const toggleModalEditPerson = () => {
+  const {showEditPerson} = store.getState();
+  console.log("showEditPersonasdasd", showEditPerson)
+  dispatch(setShowEditPerson(!showEditPerson))
 }
 
 const getGroupsData = async () => {
@@ -65,5 +71,6 @@ export {
   checkContacts, 
   createOrEditGroup, 
   choseEditGroup,
-  toggleModalEditGroup
+  toggleModalEditGroup,
+  toggleModalEditPerson
 }
