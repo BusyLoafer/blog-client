@@ -14,6 +14,7 @@
     cursor: pointer;
     margin: 0 8px;
     box-shadow: inset -3px -3px 2px 3px $shadow-black, inset 3px 3px 3px 3px $shadow-white;
+    transition: $timer ease, transform $timer ease-out;
     &:hover {
       color: $tabColorActive;
     }

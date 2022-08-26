@@ -30,7 +30,7 @@ export type Person = {
   secondName: string,
   lastName: string,
   description: string,
-  gender: string,
+  gender: boolean,
   date?: string | null,
   group: Group | null
 }

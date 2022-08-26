@@ -20,5 +20,11 @@
   background-color: $grey-1;
   box-shadow: 0 0 10px $orange2;
   color: $grey-4;
-  padding: 16px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  .btn-actions {
+    margin-top: 16px;
+  }
 }

@@ -2,15 +2,22 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
   width: 100vW;
   height: 100vH;
-  background-color: rgb(17 30 81 / 30%);
-  backdrop-filter: blur(8px);
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
+  &-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vW;
+    height: 100vH;
+    background-color: rgb(17 30 81 / 30%);
+    backdrop-filter: blur(8px);
+  }
   &-body {
-    z-index: 10;
+    z-index: 12;
   }
 }

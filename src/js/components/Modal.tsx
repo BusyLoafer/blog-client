@@ -15,8 +15,10 @@ const Modal: FC<IModal> = (props): ReactElement => {
   return (
     <div
       className='modal'
-    // onClick={onExit}
     >
+      <div className="modal-bg"
+        onClick={onExit}
+      />
       <div className="modal-body">
         {children}
       </div>

@@ -2,21 +2,35 @@ import React, { FC, ReactElement, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import Button from '../../../components/buttons/Button';
 import Input from '../../../components/forms/Input'
+import RadioGroup from '../../../components/forms/radio/RadioGroup';
 import Textarea from '../../../components/forms/Textarea';
 import Modal from '../../../components/Modal'
+import { Person } from '../../../libs/types';
 import { toggleModalEditPerson } from '../../../services/StoreServices/ContactStoreService';
 import { IRootState } from '../../../store/reducers';
 
 const PersonForm: FC<{}> = (): ReactElement => {
 
+  const [id, setId] = useState(null);
   const [firstName, setFirstName] = useState("");
   const [secondName, setSecondName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [gender, setGender] = useState(1)
   const [description, setDescription] = useState("");
 
   const showEditPerson: boolean = useSelector((state: IRootState) => state.showEditPerson);
 
-  const click = () => {}
+  const save = () => {
+    // const newPerson: Person = {
+    //   id: id ? id : undefined,
+    //   firstName,
+    //   secondName,
+    //   lastName,
+    //   description,
+    //   gender: !!gender,
+
+    // };
+  }
 
   return (
     <Modal show={showEditPerson} onExit={toggleModalEditPerson}>
@@ -39,17 +53,25 @@ const PersonForm: FC<{}> = (): ReactElement => {
           value={lastName}
           onChange={setLastName}
         />
+        <RadioGroup
+          items={["Женский", "Мужской"]}
+          value={gender}
+          label="Пол"
+          onChange={setGender}
+        />
         <Textarea
           label="Описание"
           placeholder="Описание"
           value={description}
           onChange={setDescription}
         />
-        <Button
-          text="Сохранить"
-          onClick={click}
-          disabled={firstName.trim().length <= 0}
-        />
+        <div className="btn-actions">
+          <Button
+            text="Сохранить"
+            onClick={save}
+            disabled={firstName.trim().length <= 0}
+          />
+        </div>
       </div>
     </Modal>
   )

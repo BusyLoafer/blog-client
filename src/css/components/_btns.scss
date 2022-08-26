@@ -23,7 +23,22 @@
     font-weight: 800;
     border-radius: 8px;
     width: max-content;
+    background-color: $grey-1;
+    border: none;
+    color: $grey-4;
+    box-shadow: 3px 3px 2px 3px $shadow-black,
+      -3px -3px 3px 3px $shadow-white;
+    transition: $timer ease, transform $timer ease-out;
     cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      box-shadow: -3px -3px 2px 3px $shadow-black,
+        3px 3px 3px 3px $shadow-white;
+    }
   }
 
   &-orange {
@@ -32,9 +47,15 @@
   }
 
   &-dis {
-    background-color: $grey-3;
-    color: $grey-4;
+    color: $grey-5;
     cursor: not-allowed;
+    box-shadow: -3px -3px 2px 3px $shadow-black,
+      3px 3px 3px 3px $shadow-white;
+
+    &:active {
+      box-shadow: -3px -3px 2px 3px $shadow-black,
+        3px 3px 3px 3px $shadow-white;
+    }
   }
 }
 
@@ -42,6 +63,7 @@
   &-hidden {
     display: none;
   }
+
   &-panel {
     position: absolute;
     bottom: 8px;
@@ -51,18 +73,21 @@
     border-radius: 16px;
     padding: 4px;
     cursor: pointer;
+
     &:hover {
-      // background-color: $grey-1;
       border-radius: 8px;
+
       .info-hidden {
         display: block;
       }
     }
-    i {    
+
+    i {
       padding: 8px;
       border-radius: 8px;
       margin: 4px;
       box-shadow: inset -3px -3px 2px 3px $shadow-black, inset 3px 3px 3px 3px $shadow-white;
+
       &:hover {
         color: $orange;
       }

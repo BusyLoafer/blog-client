@@ -9,13 +9,13 @@ import { createOrEditGroup, toggleModalEditGroup } from '../../../services/Store
 import { IRootState } from '../../../store/reducers'
 
 const FormGroup: FC<{}> = (props): ReactElement => {
-  
+
   const [id, setId] = useState(null)
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
 
-  const editGroup:Group | null = useSelector((state: IRootState) => state.editGroup);
-  const showEditGroup:boolean  = useSelector((state: IRootState) => state.showEditGroup);
+  const editGroup: Group | null = useSelector((state: IRootState) => state.editGroup);
+  const showEditGroup: boolean = useSelector((state: IRootState) => state.showEditGroup);
 
   useEffect(() => {
     if (editGroup) {
@@ -30,7 +30,7 @@ const FormGroup: FC<{}> = (props): ReactElement => {
   }, [editGroup])
 
   const click = () => {
-    const newGroup: Group = { id: id? id : undefined, title, description};
+    const newGroup: Group = { id: id ? id : undefined, title, description };
     createOrEditGroup(newGroup)
   }
 
@@ -49,11 +49,13 @@ const FormGroup: FC<{}> = (props): ReactElement => {
           value={description}
           onChange={setDescription}
         />
-        <Button
-          text="Сохранить"
-          onClick={click}
-          disabled={title.trim().length <= 0}
-        />
+        <div className="btn-actions">
+          <Button
+            text="Сохранить"
+            onClick={click}
+            disabled={title.trim().length <= 0}
+          />
+        </div>
       </div>
     </Modal>
   )

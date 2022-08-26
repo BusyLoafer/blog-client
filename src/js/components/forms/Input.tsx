@@ -15,7 +15,7 @@ const Input: FC<CostumInput> = (props): ReactElement => {
 
   return (
     <div className='form-block form-input'>
-      <span>{label}</span>
+      <span className='form-label'>{label}</span>
       <input
         type="text"
         className='fz-18'

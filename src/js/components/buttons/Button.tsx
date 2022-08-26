@@ -10,7 +10,7 @@ interface IButton {
 
 const Button: FC<IButton> = (props): ReactElement => {
 
-  const { text = "", onClick, className = "", disabled = false, color = "orange" } = props;
+  const { text = "", onClick, className = "", disabled = false, color = "" } = props;
 
   const checkClick = () => {
     if (disabled) return
@@ -20,12 +20,12 @@ const Button: FC<IButton> = (props): ReactElement => {
   const name = "btn-base btn-" + color + className + (disabled ? " btn-dis" : "");
 
   return (
-    <div
+    <button
       className={name}
       onClick={checkClick}
     >
       {text}
-    </div>
+    </button>
   )
 }
 

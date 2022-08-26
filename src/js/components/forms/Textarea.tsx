@@ -15,7 +15,7 @@ const Textarea: FC<CostumTextarea> = (props): ReactElement => {
 
   return (
     <div className='form-block form-textarea'>
-      <span>{label}</span>
+      <span className='form-label'>{label}</span>
       <textarea
         className='fz-18'
         value={value}
