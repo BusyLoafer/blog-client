@@ -3,9 +3,10 @@ import { useSelector } from 'react-redux';
 import Button from '../../../components/buttons/Button';
 import Input from '../../../components/forms/Input'
 import RadioGroup from '../../../components/forms/radio/RadioGroup';
+import SelectList from '../../../components/forms/selectList/SelectList';
 import Textarea from '../../../components/forms/Textarea';
 import Modal from '../../../components/Modal'
-import { Person } from '../../../libs/types';
+import { Group, Person } from '../../../libs/types';
 import { toggleModalEditPerson } from '../../../services/StoreServices/ContactStoreService';
 import { IRootState } from '../../../store/reducers';
 
@@ -19,6 +20,7 @@ const PersonForm: FC<{}> = (): ReactElement => {
   const [description, setDescription] = useState("");
 
   const showEditPerson: boolean = useSelector((state: IRootState) => state.showEditPerson);
+  const groups: Group[] = useSelector((state: IRootState) => state.groups);
 
   const save = () => {
     // const newPerson: Person = {
@@ -64,6 +66,13 @@ const PersonForm: FC<{}> = (): ReactElement => {
           placeholder="Описание"
           value={description}
           onChange={setDescription}
+        />
+        <SelectList
+          label="Группы"
+          items={groups}
+          selected={groups}
+          onAdd={() => { }}
+          onDelete={(id: number) => { }}
         />
         <div className="btn-actions">
           <Button
