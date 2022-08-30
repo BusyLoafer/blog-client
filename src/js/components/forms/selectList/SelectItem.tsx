@@ -11,7 +11,10 @@ const SelectItem: FC<ISelectItem> = (props): ReactElement => {
 
   const onClick = () => onAdd(item.id)
 
-  return <div className='select-list-item' onClick={onClick}>9{item.title}</div>
+  return <div className='select-list-item' onClick={onClick}>
+    {item.title}
+    <i className="icon-plus" />
+    </div>
 }
 
 export default SelectItem

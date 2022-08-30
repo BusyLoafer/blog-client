@@ -117,6 +117,8 @@
 
 .select-list {
   position: relative;
+  border-radius: 8px;
+  padding: 12px 4px;
   box-shadow: 3px 3px 2px 3px $shadow-black,
     -3px -3px 3px 3px $shadow-white;
 
@@ -150,6 +152,7 @@
     display: flex;
     align-items: center;
     margin: 8px 8px;
+    border-radius: 4px;
     padding: 0 4px 0 8px;
     box-shadow: 3px 3px 2px 3px $shadow-black,
       -3px -3px 3px 3px $shadow-white;
@@ -158,9 +161,71 @@
       cursor: pointer;
       padding: 8px;
       font-size: 10px;
-      &:hover, &:active {
+
+      &:hover,
+      &:active {
         color: $orange;
       }
+    }
+  }
+
+  &-input {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 16px;
+    align-items: center;
+
+    input {
+      flex-grow: 1;
+      border-radius: 8px;
+      border: none;
+      color: #696b6e;
+      background-color: #212529;
+      padding: 8px 40px 8px 8px;
+      font-size: 18px;
+      box-shadow: -3px -3px 2px 3px $shadow-black,
+        3px 3px 3px 3px $shadow-white;
+
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+
+    i {
+      margin-left: -40px;
+      padding: 8px;
+      font-size: 12px;
+      cursor: pointer;
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  &-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    box-shadow: 3px 3px 2px 3px $shadow-black,
+      -3px -3px 3px 3px $shadow-white;
+    display: flex;
+    align-items: center;
+    margin: 12px;
+    padding: 0 4px 0 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+      i {
+        color: $orange;
+      }
+    }
+
+    i {
+      padding: 8px;
+      font-size: 10px;
     }
   }
 }

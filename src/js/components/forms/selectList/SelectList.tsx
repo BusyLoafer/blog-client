@@ -39,7 +39,8 @@ const SelectList: FC<ISelectList> = (props): ReactElement => {
         />
         <SelectListItems
           show={showList}
-          items={filtered}
+          // items={filtered}
+          items={selected}
           onAdd={onAdd}
           searching={true}
         />

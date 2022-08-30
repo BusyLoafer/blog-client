@@ -37,12 +37,14 @@ const SelectListItems: FC<ISelectListItems> = (props): ReactElement => {
         onChange={onChangeSearch}
         value={search}
       />
-      {
-        filtered.map((item: Group) => <SelectItem
-          item={item}
-          onAdd={onAdd}
-        />)
-      }
+      <div className="select-list-items">
+        {
+          filtered.map((item: Group) => <SelectItem
+            item={item}
+            onAdd={onAdd}
+          />)
+        }
+      </div>
     </div>
   )
 }
