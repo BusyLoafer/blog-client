@@ -19,3 +19,24 @@
   padding: 16px;
   flex-grow: 1;
 }
+
+.anim {
+  transition: $timer ease, transform $timer ease-out;
+}
+
+.hill {
+  box-shadow: $shadow-off-black, $shadow-off-white;
+  &.clickable:active, &.focusable:focus, &-on {
+    box-shadow: $shadow-on-black, $shadow-on-white;
+  }
+  &-in {
+    box-shadow: inset $shadow-on-black, inset $shadow-on-white;
+    &.clickable:active, &.focusable:focus {
+      box-shadow: $shadow-on-black, $shadow-on-white;
+    }
+  }
+}
+
+.pit {
+  box-shadow: $shadow-on-black, $shadow-on-white;
+}

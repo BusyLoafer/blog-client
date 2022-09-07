@@ -10,7 +10,7 @@ const Tab:FC<TabProps> = ({ title, active, onClick }) => {
 
   return (
     <div
-      className={active ? 'tab tab-active' : 'tab'}
+      className={'tab hill clickable ' + (active ? 'tab-active' : '')}
       onClick={onClick}
     >
       {title}

@@ -31,7 +31,7 @@ const SelectList: FC<ISelectList> = (props): ReactElement => {
   return (
     <div className='form-block'>
       <span className='form-label'>{label}</span>
-      <div className='select-list'>
+      <div className='select-list hill'>
         <SelectListForm
           toggleShowList={toggleShowList}
           selected={selected}

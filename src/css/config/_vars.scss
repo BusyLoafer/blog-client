@@ -15,6 +15,11 @@ $shadow-black: rgb(20 22 24 / 25%);
 $shadow-white: rgb(63 66 70 / 25%);
 $shadow-white-inset: rgb(6 6 7 / 25%);
 
+$shadow-off-black: 3px 3px 2px 3px $shadow-black;
+$shadow-off-white: -3px -3px 3px 3px $shadow-white;
+$shadow-on-black: -3px -3px 2px 3px $shadow-black;
+$shadow-on-white: 3px 3px 3px 3px $shadow-white;
+
 
 // ? BORDER RADUIS
 $radMin: 8px;

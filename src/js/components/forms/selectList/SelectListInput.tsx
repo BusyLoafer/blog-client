@@ -23,6 +23,7 @@ const SelectListInput: FC<ISelectListInput> = (props): ReactElement => {
     <div className='select-list-input'>
       <input
         type="text"
+        className='pit'
         ref={inputRef}
         onChange={onChange}
         value={value}

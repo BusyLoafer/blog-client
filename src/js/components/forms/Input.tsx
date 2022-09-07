@@ -18,7 +18,7 @@ const Input: FC<CostumInput> = (props): ReactElement => {
       <span className='form-label'>{label}</span>
       <input
         type="text"
-        className='fz-18'
+        className='fz-18 anim hill focusable'
         value={value}
         placeholder={placeholder || ""}
         onChange={changeValue}

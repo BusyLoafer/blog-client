@@ -17,7 +17,7 @@ const Textarea: FC<CostumTextarea> = (props): ReactElement => {
     <div className='form-block form-textarea'>
       <span className='form-label'>{label}</span>
       <textarea
-        className='fz-18'
+        className='fz-18 anim hill focusable'
         value={value}
         placeholder={placeholder || ""}
         onChange={changeValue}

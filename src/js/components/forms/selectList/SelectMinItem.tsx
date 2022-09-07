@@ -12,7 +12,7 @@ const SelectMinItem: FC<ISelectMinItem> = (props): ReactElement => {
   const onClick = () => onDelete(item.id)
 
   return (
-    <div className='select-list-min-item'>
+    <div className='select-list-min-item hill'>
       <span>{item.title}</span>
       <i className="icon-cross" onClick={onClick} />
     </div>

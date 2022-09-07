@@ -22,7 +22,7 @@ const SelectListForm: FC<ISelectListForm> = (props): ReactElement => {
           />)
         }
       </div>
-      <i className="icon-search btn-search" onClick={toggleShowList} />
+      <i className="icon-search btn-search hill clickable" onClick={toggleShowList} />
     </div>
   )
 }

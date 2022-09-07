@@ -11,7 +11,7 @@ const SelectItem: FC<ISelectItem> = (props): ReactElement => {
 
   const onClick = () => onAdd(item.id)
 
-  return <div className='select-list-item' onClick={onClick}>
+  return <div className='select-list-item hill' onClick={onClick}>
     {item.title}
     <i className="icon-plus" />
     </div>

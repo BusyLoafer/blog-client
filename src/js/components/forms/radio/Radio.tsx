@@ -18,7 +18,7 @@ const Radio: FC<IRadio> = ({ title, value, index, onClick }): ReactElement => {
       className='radio'
       onClick={checkClick}
     >
-      <div className={"radio-value " + (value ? "radio-value-on" : "")} />
+      <div className={"radio-value anim hill" + (value ? "-on" : "")} />
       <span className={"radio-label " + (value ? "radio-label-on" : "")}>
         {title}
       </span>

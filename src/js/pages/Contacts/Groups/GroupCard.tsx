@@ -8,7 +8,7 @@ const GroupCard: FC<Group> = (group): ReactElement => {
   const {title, description} = group;
 
   return (
-    <div className='card'>
+    <div className='card hill'>
       <div className='card-title fz-24'>{title}</div>
       <div className='fz-14'>{description}</div>
       <Info

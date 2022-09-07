@@ -17,7 +17,7 @@ const Button: FC<IButton> = (props): ReactElement => {
     onClick()
   }
 
-  const name = "btn-base btn-" + color + className + (disabled ? " btn-dis" : "");
+  const name = "anim btn-base " + (color ? "btn-" + color : "") + className + (disabled ? " btn-dis" : "hill clickable");
 
   return (
     <button
